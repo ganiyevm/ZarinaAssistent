@@ -4,8 +4,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-WorkingDirectory=/opt/zarina-bot
-ExecStart=/opt/zarina-bot/.venv/bin/python -m bot
+User=jahongir
+WorkingDirectory=/home/jahongir/zarina-bot
+ExecStart=/home/jahongir/zarina-bot/.venv/bin/python -m bot
 Restart=always
 RestartSec=5
 Environment=PYTHONUNBUFFERED=1
