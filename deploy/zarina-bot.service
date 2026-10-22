@@ -1,0 +1,14 @@
+[Unit]
+Description=ZarinaAssistent Telegram birthday bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/zarina-bot
+ExecStart=/opt/zarina-bot/.venv/bin/python -m bot
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
